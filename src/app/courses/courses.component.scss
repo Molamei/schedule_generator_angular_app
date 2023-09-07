@@ -1,0 +1,174 @@
+/* Add your custom styles here */
+.courses {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    pointer-events: none;
+}
+
+#courses h2 {
+    font-size: 2.75rem;
+    color: #006bd5;
+}
+
+#courses {
+    position: relative;
+    z-index: 3;
+}
+
+.course {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.course h3 {
+    color: #0a7ef5;
+    font-size: 2rem;
+}
+
+.course p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.course .addBtn,
+.course .viewBtn {
+    padding: 2% 5% !important;
+    border-style: none !important;
+    border-radius: 20px !important;
+    transition: all 0.2s;
+    background-color: transparent !important; /* Preserve original background color */
+}
+
+.course .viewBtn:hover {
+    background-color: #0662be !important;
+}
+
+.course .addBtn:hover {
+    background-color: #069910 !important;
+}
+
+.btns {
+    margin-left: 71% !important;
+}
+
+.addedCourses {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.title i {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+mat-paginator {
+    position: relative;
+    z-index: 4;
+}
+.search input{
+    border-style: none;
+    background-color: white !important;
+    color: black;
+    padding: 20px 50px 20px 20px;
+    border-radius: 30px;
+}
+.search{
+    
+    width: 80%;
+    height: 60px;
+    margin: 50px auto;
+}
+.bg-light {
+    background-color: white;
+    position: relative;
+    z-index: 10;
+}
+/* Add a background color to the buttons and change it on hover */
+.course .addBtn,
+.course .viewBtn {
+    padding: 18px 30px !important;
+    border-style: none;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.2s; /* Add a transition for smoother hover effect */
+    background-color: #0ada18 !important; /* Default background color for addBtn */
+}
+
+.course .viewBtn {
+    background-color: #0a7ef5 !important; /* Default background color for viewBtn */
+}
+
+/* Darken the background color on hover */
+.course .viewBtn:hover {
+    background-color: #0662be; /* Darkened background color for viewBtn */
+}
+
+.course .addBtn:hover {
+    background-color: #069910; /* Darkened background color for addBtn */
+}
+
+
+/* Add a thin white outline to the "Courses" title */
+#courses h2 {
+    font-size: 46px;
+    color: #006bd5;
+    text-shadow: 0 0 3px white; /* Adjust the shadow values for a thin outline */
+}
+
+
+
+
+
+/* Mobile-first responsive styles */
+@media (max-width: 767px) {
+    .btns {
+        margin-left: 0 !important; /* Remove margin for buttons */
+    }
+
+    .search button {
+        display: none; /* Hide the "Find" button on mobile */
+    }
+    .course{
+        width: 100% !important;
+    }
+    .search{
+        width: 100%;
+    }
+    .search input{
+        width: 100%;
+    }
+    .course .addBtn,
+    .course .viewBtn {
+        padding: 10px 20px !important;
+    }
+}

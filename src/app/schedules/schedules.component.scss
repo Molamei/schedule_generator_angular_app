@@ -1,0 +1,212 @@
+$accent-base: #009dff;
+$cutty-sark: #0baaf4;
+$porcelain: #ECEFF1;
+$accents: (
+  pink: adjust-hue($accent-base, -180%),
+  orange: adjust-hue($accent-base, -120%),
+  green: adjust-hue($accent-base, -60%),
+  cyan: $accent-base,
+  blue: adjust-hue($accent-base, 60%),
+  purple: adjust-hue($accent-base, 120%),
+);
+
+@function make-gradient($color){
+  @return linear-gradient(135deg, $color, adjust-hue($color, 40%));
+}
+
+@mixin make-tiles{
+  @each $name, $value in $accents{
+    .accent-#{$name}-gradient{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: .2s ease box-shadow, .2s ease transform;
+      position: relative; // Add this to make positioning easier
+      &:hover{
+        box-shadow: 0 20px 30px 0 transparentize($value, 0.7);
+        transform: scale(1.05);
+      }
+
+      // Define the gradient background for the vertical part
+      background: linear-gradient(90deg, $value 10%, rgba(255, 255, 255, 0) 10%);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      // Adjust the positioning of the text
+      padding-left: 15px; // Add padding to avoid text overlap
+      box-sizing: border-box; // Include padding in the width
+    }
+  }
+}
+.courses h2 {
+  font-size: 46px;
+  color: #0a7ef5;
+}
+html, body{
+  margin: 0;
+  font-family: 'Karla';
+  color: $cutty-sark;
+}
+
+*{
+  box-sizing: border-box;
+}
+.courses{
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Use min-height to allow for content overflow */
+    overflow-y: auto;
+   
+}
+
+.layer{
+    position: absolute;
+     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+}
+.color-overlay {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 2; /* Ensure the overlay is above the content */
+  pointer-events: none;
+}
+h2{
+    position: relative;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: 30px
+}
+.timetable{
+  @include make-tiles;
+  display: grid;
+  position: relative;
+  background-color: white;
+  
+  z-index: 3;
+  grid-template-areas: ". week"
+                       "time content";
+  grid-template-columns: 200px;
+  grid-template-rows: 60px;
+  width: 80%;
+  height: 80%;
+  margin: 50px auto;
+  .weekend {
+    background: lighten($porcelain, 5%);
+    color: lighten($cutty-sark, 20%);
+  }
+  .week-names{
+    grid-area: week;
+    display: grid;
+    // 7 days a week
+    grid-template-columns: repeat(7, 1fr);
+    text-transform: uppercase;
+    font-size: 12px;
+    & > div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 1px 0 0 $porcelain;
+    }
+  }
+  .time-interval{
+    grid-area: time;
+    display: grid;
+    // 6 time intervals
+    grid-template-rows: repeat(12, 1fr); 
+    font-size: 14px;
+    & > div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 1px 0 0 $porcelain;
+    }
+  }
+  .content{
+    grid-area: content;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
+    & > div{
+       box-shadow: inset 1px 0 0 $porcelain, inset 0 1px 0 0 $porcelain;
+    }
+  }
+}
+mat-paginator{
+  position: relative;
+  z-index: 4;
+  
+}
+.bg-light{
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+.period{
+  font-size: 12px;
+}
+/* Your existing CSS code */
+
+@media screen and (max-width: 768px) {
+  .timetable {
+      width: 50%;
+      margin-left: 0 !important;
+      
+  }
+
+  .week-names {
+      
+  }
+
+  .time-interval {
+      font-size: 6px;
+      width: 50%;
+      
+  }
+
+  .content {
+      
+  }
+  
+  /* Add any additional styling for mobile here */
+}
+
+@media screen and (max-width: 768px) {
+  .timetable {
+    width: 74%;
+    margin: 30px auto !important;
+    grid-template-columns: repeat(7, 1fr);
+
+    .week-names {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .time-interval {
+      grid-template-rows: repeat(12, 1fr);
+    }
+  }
+
+  .content {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .period {
+    font-size: 10px;
+  }
+}

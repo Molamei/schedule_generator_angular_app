@@ -1,0 +1,51 @@
+<div class="courses">
+    <div class="color-overlay"></div>
+    <div class="layer h-100"></div>
+    <div id="courses" class="p-3">
+        <h2 class="pt-3">Courses</h2>
+        <div class="container">
+            <div name="inputValue" ngDefaultControl [(ngModel)]="inputValue" (keyup)="searchCourses()" class="search position-relative mb-3">
+                <input type="text" class="bar w-75 h-100 " placeholder="Find your courses ... " value="">
+            </div>
+            <div class="row g-0">
+                <div class="col-12 col-md-9">
+                    <div *ngIf="!courses[0]" class="error-dev alert alert-danger w-100">
+                        Your search does not match any courses
+                    </div>
+                    <div *ngFor="let course of courses; let i = index" class="course shadow-lg w-75">
+                        <h3>{{course.course_code}}</h3>
+                        <p>{{course.course_name}}</p>
+                        <div class="btns d-flex ms-auto">
+                            <button class="btn addBtn" (click)="addCourse(i)">ADD</button>
+                            <button (click)="navigateToSections(i)" class="btn viewBtn ms-2">VIEW</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="addedCourses bg-white w-100">
+                        <div class="title d-flex justify-content-between">
+                            <h3>Cart</h3>
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+                        <div class="addedList mt-3">
+                            <div *ngFor="let addedCourse of addedCourses; let j = index" class="courseInCart">
+                                <div class="d-flex justify-content-between">
+                                    <p>{{addedCourse}}</p>
+                                    <i class="bi bi-trash text-danger btn" (click)="removeCourse(j)"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <button (click)="navigateToSchedules()" class="btn btn-success m-auto mt-3">Generate Schedule</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light">
+        <mat-paginator
+            [length]="data?.pagination.totalNumber"
+            [pageSize]="10"
+            (page)="onPageChange($event)"
+        ></mat-paginator>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.navbar ul{
+  padding-right: 100px;
+}
+.navbar{
+  background-color: transparent !important;
+}
+.nav-item a{
+  color: black !important;
+  font-weight: 600 !important;
+}
+.navlink{
+  position: relative;
+  color: black !important;
+}
+.navlink::before{
+  content: "";
+  background-color: black;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  transition: all 0.5s;
+
+}
+.navlink:hover::before{
+  width: 60%;
+}

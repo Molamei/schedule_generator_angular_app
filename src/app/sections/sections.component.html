@@ -1,0 +1,29 @@
+<div class="courses">
+    <div class="color-overlay"></div>
+    <div class="layer h-100"></div>
+    <div id="sections" class="pt-3 ps-5 position-relative">
+        <h2 class="pt-5">Course Sections</h2>
+        <div class="container">
+            <div *ngFor="let section of sections" class="section shadow-lg position-relative">
+                <div class="section-content">
+                    <h3>{{courseName}}</h3>
+                    <div class="d-flex justify-content-between">
+                        <div class="section-info">
+                            <p>Subtype: {{section.section_type}}</p>
+                            <p>Section: {{section.section_name}}</p>
+                            <p>{{section.section_day}}</p>
+                            <p>{{section.section_from}} - {{section.section_to}}</p>
+                        </div>
+                        <div class="instructor text-center">
+                            <i class="bi bi-person-circle"></i>
+                            <p class="mt-3">{{section.instructor_username}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="backbutton" href="/courses">
+            <div class="btn btn-dark">Back to Courses</div>
+        </a>
+    </div>
+</div>

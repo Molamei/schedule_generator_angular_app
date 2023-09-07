@@ -1,0 +1,268 @@
+<div class="courses">
+    <div class="color-overlay"></div>
+    <div class="layer h-100"></div>
+    <h2>Generated Schedules</h2>
+    <div  *ngFor="let schedule of schedules; let i = index" class="timetable">
+        <div class="week-names">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Teusday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div class="weekend">Friday</div>
+          <div class="weekend">Saturday</div>
+        </div>
+        <div class="time-interval">
+          <div>8:30 - 9:30</div>
+          <div>9:30 - 10:30</div>
+          <div>10:30 - 11:30</div>
+          <div>11:30 - 12:30</div>
+          <div>12:30 - 13:30</div>
+          <div>13:30 - 14:30</div>
+          <div>14:30 - 14:30</div>
+          <div>15:30 - 16:30</div>
+          <div>16:30 - 17:30</div>
+          <div>17:30 - 18:30</div>
+          <div>18:30 - 19:30</div>
+          <div>19:30 - 20:30</div>
+        </div>
+        <div class="content">
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_1_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto" >{{schedule.sunday.hour_1_section?.course_code }} - {{schedule.sunday.hour_1_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_1_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_1_section?.course_code }} - {{schedule.monday.hour_1_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_1_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_1_section?.course_code }} - {{schedule.tuesday.hour_1_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_1_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_1_section?.course_code }} - {{schedule.wednesday.hour_1_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_1_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_1_section?.course_code }} - {{schedule.thursday.hour_1_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_2_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_2_section?.course_code }} - {{schedule.sunday.hour_2_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_2_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_2_section?.course_code }} - {{schedule.monday.hour_2_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_2_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_2_section?.course_code }} - {{schedule.tuesday.hour_2_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_2_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_2_section?.course_code }} - {{schedule.wednesday.hour_2_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_2_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_2_section?.course_code }} - {{schedule.thursday.hour_2_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_3_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_3_section?.course_code }} - {{schedule.sunday.hour_3_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_3_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_3_section?.course_code }} - {{schedule.monday.hour_3_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_3_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_3_section?.course_code }} - {{schedule.tuesday.hour_3_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_3_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_3_section?.course_code }} - {{schedule.wednesday.hour_3_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_3_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_3_section?.course_code }} - {{schedule.thursday.hour_3_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_4_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_4_section?.course_code }} - {{schedule.sunday.hour_4_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_4_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_4_section?.course_code }} - {{schedule.monday.hour_4_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_4_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_4_section?.course_code }} - {{schedule.tuesday.hour_4_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_4_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_4_section?.course_code }} - {{schedule.wednesday.hour_4_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_4_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_4_section?.course_code }} - {{schedule.thursday.hour_4_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_5_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_5_section?.course_code }} - {{schedule.sunday.hour_5_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_5_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_5_section?.course_code }} - {{schedule.monday.hour_5_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_5_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_5_section?.course_code }} - {{schedule.tuesday.hour_5_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_5_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_5_section?.course_code }} - {{schedule.wednesday.hour_5_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_5_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_5_section?.course_code }} - {{schedule.thursday.hour_5_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_6_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_6_section?.course_code }} - {{schedule.sunday.hour_6_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_6_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_6_section?.course_code }} - {{schedule.monday.hour_6_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_6_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_6_section?.course_code }} - {{schedule.tuesday.hour_6_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_6_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_6_section?.course_code }} - {{schedule.wednesday.hour_6_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_6_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_6_section?.course_code }} - {{schedule.thursday.hour_6_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_7_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_7_section?.course_code }} - {{schedule.sunday.hour_7_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_7_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_7_section?.course_code }} - {{schedule.monday.hour_7_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_7_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_7_section?.course_code }} - {{schedule.tuesday.hour_7_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_7_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_7_section?.course_code }} - {{schedule.wednesday.hour_7_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_7_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_7_section?.course_code }} - {{schedule.thursday.hour_7_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_8_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_8_section?.course_code }} - {{schedule.sunday.hour_8_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_8_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_8_section?.course_code }} - {{schedule.monday.hour_8_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_8_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_8_section?.course_code }} - {{schedule.tuesday.hour_8_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_8_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_8_section?.course_code }} - {{schedule.wednesday.hour_8_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_8_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_8_section?.course_code }} - {{schedule.thursday.hour_8_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_9_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_9_section?.course_code }} - {{schedule.sunday.hour_9_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_9_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_9_section?.course_code }} - {{schedule.monday.hour_9_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_9_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_9_section?.course_code }} - {{schedule.tuesday.hour_9_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_9_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_9_section?.course_code }} - {{schedule.wednesday.hour_9_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_9_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_9_section?.course_code }} - {{schedule.thursday.hour_9_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_10_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_10_section?.course_code }} - {{schedule.sunday.hour_10_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_10_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_10_section?.course_code }} - {{schedule.monday.hour_10_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_10_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_10_section?.course_code }} - {{schedule.tuesday.hour_10_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_10_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_10_section?.course_code }} - {{schedule.wednesday.hour_10_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_10_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_10_section?.course_code }} - {{schedule.thursday.hour_10_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_11_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_11_section?.course_code }} - {{schedule.sunday.hour_11_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_11_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_11_section?.course_code }} - {{schedule.monday.hour_11_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_11_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_11_section?.course_code }} - {{schedule.tuesday.hour_11_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_11_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_11_section?.course_code }} - {{schedule.wednesday.hour_11_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_11_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_11_section?.course_code }} - {{schedule.thursday.hour_11_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.sunday.hour_12_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.sunday.hour_12_section?.course_code }} - {{schedule.sunday.hour_12_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.monday.hour_12_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.monday.hour_12_section?.course_code }} - {{schedule.monday.hour_12_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.tuesday.hour_12_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.tuesday.hour_12_section?.course_code }} - {{schedule.tuesday.hour_12_section?.section_type }}</div></div>
+          </div>
+          <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.wednesday.hour_12_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.wednesday.hour_12_section?.course_code }} - {{schedule.wednesday.hour_12_section?.section_type }}</div></div>
+          </div>
+            <div>
+            <div>
+            <div [ngClass]="{ 'accent-cyan-gradient': schedule.thursday.hour_12_section }" ><div *ngIf="schedule.sunday.hour_1_section " class="period m-auto">{{schedule.thursday.hour_12_section?.course_code }} - {{schedule.thursday.hour_12_section?.section_type }}</div></div>
+          </div>
+          </div>
+          <div class="weekend"></div>
+          <div class="weekend"></div>
+    </div>
+    
+</div>
+<div class="bg-light">
+  <mat-paginator
+  [length]="data?.pagination.totalNumber"
+  [pageSize]="10"
+
+  (page)="onPageChange($event)"
+></mat-paginator>
+</div>

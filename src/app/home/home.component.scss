@@ -1,0 +1,273 @@
+
+
+#home{
+    position: relative;
+}
+
+.header{
+    height: 100vh;
+}
+.nav-item a{
+    color: black !important;
+    font-weight: 600 !important;
+}
+.qcircle{
+    position: absolute;
+    right: 0;
+    width: 750px;
+  height: 350px;
+  border-radius: 0 0 0 300px;
+    background-color: #2D59BA;
+    transition: all 1s;
+    
+}
+.qcircle:hover{
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    transition: all 1s;
+}
+/* .hovh1{
+    transition: all 1s;
+}
+.qcircle:hover + .hovh1{
+    transition: all 1s;
+    color: white
+    
+}
+.hovp{
+    transition: all 1s;
+}
+.qcircle:hover + .hovp{
+    transition: all 1s;
+    color: white
+    
+} */
+.navbar ul{
+    padding-right: 100px;
+}
+.nav-item a{
+    color: black !important;
+    font-weight: 600 !important;
+}
+.right{
+    z-index: 10000 !important;
+    pointer-events: none;
+}
+
+.left{
+    z-index: 10000 !important;
+}
+.headbtn{
+    background-color: #2D59BA;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 15px;
+    border: solid white 2px;
+    font-size: 17px;
+    margin-top: 10px;
+    transition: all 0.5s;
+
+}
+.headbtn:hover{
+    background-color: #FFC100;
+    color: black;
+}
+.navlink{
+    position: relative;
+    color: black !important;
+}
+.navlink::before{
+    content: "";
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    transition: all 0.5s;
+
+}
+.navlink:hover::before{
+    width: 60%;
+}
+
+
+
+.htuh2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #333333;
+    padding: 5px;
+  }
+  .brdr1{
+      margin:auto;
+      width: 5%;
+      height: 0.07px;
+      background-color: #2D59BA;
+  
+  }
+  .brdr2{
+      margin:5px auto;
+      width: 13%;
+      height: 0.07px;
+      background-color: #2D59BA;
+  }
+  .brdr4{
+      margin:auto;
+      margin-bottom: 30px;
+      width: 5%;
+      height: 0.07px;
+      background-color: #2D59BA;
+  
+  }
+.steps{
+    position: relative;
+    background-color: #FFECB2;
+    width: 700px;
+    height: 400px;
+    transition: all 1s;
+        
+}
+.steps:hover{
+    background: #ffd75f;
+}
+/* .steps::after{
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: -15;
+    left: -25;
+    background-color: transparent;
+    border: 3px solid blue;
+
+} */
+.abtrow{
+}
+.abt_main{
+    background-color: #FFECB2;
+    position: relative;
+}
+
+.abt_main::before{
+    content: "";
+    position: absolute;
+    width: 177;
+    height: 177;
+    right: 10%;
+    top: 6%;
+   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ; 
+   background-color: #2D59BA;
+}
+.abt_main::after{
+    content: "";
+    position: absolute;
+    width: 177;
+    height: 177;
+    right: 10%;
+    bottom: 3%;
+   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ; 
+   background-color: #2D59BA;
+}
+
+.dev_img{
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    border-radius: 50%;
+    width: 200px;
+}
+.dev_img2{
+    position: absolute;
+    right: 12%;
+    bottom: 8%;
+    border-radius: 50%;
+    z-index: 100;
+    width: 200px;
+}
+
+.min_divpic1{
+    opacity: 0;
+    width: 200px;
+}
+.min_divpic2{
+    opacity: 0;
+    width: 200px;
+}
+
+@media screen and (max-width:600px){
+.qcircle{
+    display: none;
+}
+.dev_img {
+    display: none;
+}
+.abt_main::before{
+    display: none;
+}
+.dev_img2{
+    display: none;
+}
+.abt_main::after{
+    display: none;
+}
+.min_divpic1 {
+    opacity: 1;
+}
+.min_divpic2{
+    opacity: 1;
+}
+}
+@media screen and (min-width:601px) and (max-width:768px){
+    .qcircle{
+        display: none;
+    }
+    .dev_img {
+        display: none;
+    }
+    .abt_main::before{
+        display: none;
+    }
+    .dev_img2{
+        display: none;
+    }
+    .abt_main::after{
+        display: none;
+    }
+    .min_divpic1 {
+        opacity: 1;
+    }
+    .min_divpic2{
+        opacity: 1;
+    }
+    
+}
+@media screen and (min-width:769px) and (max-width:992px){
+    .courses{
+        padding: 40px;
+    }
+    .qcircle{
+        display: none;
+    }
+    .dev_img {
+        display: none;
+    }
+    .abt_main::before{
+        display: none;
+    }
+    .dev_img2{
+        display: none;
+    }
+    .abt_main::after{
+        display: none;
+    }
+    .min_divpic1 {
+        opacity: 1;
+    }
+    .min_divpic2{
+        opacity: 1;
+    }
+}
