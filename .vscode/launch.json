@@ -7,7 +7,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "url": "http://ec2-51-20-6-22.eu-north-1.compute.amazonaws.com:3030/"
     },
     {
       "name": "ng test",
