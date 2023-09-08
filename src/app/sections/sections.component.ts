@@ -36,7 +36,7 @@ export class SectionsComponent implements OnInit {
   }
   getData(pageIndex: any) {
 
-    const apiUrl = `http://ec2-51-20-6-22.eu-north-1.compute.amazonaws.com:3030/sections?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.courseId}`;
+    const apiUrl = `http://ec2-16-171-198-0.eu-north-1.compute.amazonaws.com:3030//sections?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.courseId}`;
     this.dataService.getApiData(apiUrl).subscribe((data) => {
 
       this.data = data;

@@ -32,7 +32,7 @@ export class CoursesComponent implements OnInit {
   }
   searchCourses() {
     this.pageIndex = 1;
-    const apiUrl = `http://ec2-51-20-6-22.eu-north-1.compute.amazonaws.com:3030/courses?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
+    const apiUrl = `http://ec2-16-171-198-0.eu-north-1.compute.amazonaws.com:3030//courses?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
     this.dataService.getApiData(apiUrl).subscribe((data) => {
       console.log(data);
       this.courses = data.results;
@@ -67,7 +67,7 @@ export class CoursesComponent implements OnInit {
   }
   getData(pageIndex: any) {
 
-    const apiUrl = `http://ec2-51-20-6-22.eu-north-1.compute.amazonaws.com:3030/courses?pageNo=${pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
+    const apiUrl = `http://ec2-16-171-198-0.eu-north-1.compute.amazonaws.com:3030//courses?pageNo=${pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
     this.dataService.getApiData(apiUrl).subscribe((data) => {
       console.log(data);
       this.data = data;
