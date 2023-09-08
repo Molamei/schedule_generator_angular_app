@@ -36,7 +36,7 @@ export class SchedulesComponent implements OnInit {
   }
   getData(pageIndex: any) {
 
-    const url = `http://16.171.198.0:3030/schedules?pageNo=${pageIndex}&limit=${this.pageSize}`;
+    const url = `https://gadwelooh.ddns.net:3030/schedules?pageNo=${pageIndex}&limit=${this.pageSize}`;
 
 
     const headers = new HttpHeaders({

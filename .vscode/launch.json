@@ -7,7 +7,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://16.171.198.0:3030/"
+      "url": "https://gadwelooh.ddns.net:3030/"
     },
     {
       "name": "ng test",

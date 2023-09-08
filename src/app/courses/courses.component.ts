@@ -32,7 +32,7 @@ export class CoursesComponent implements OnInit {
   }
   searchCourses() {
     this.pageIndex = 1;
-    const apiUrl = `http://16.171.198.0:3030/courses?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
+    const apiUrl = `https://gadwelooh.ddns.net:3030/courses?pageNo=${this.pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
     this.dataService.getApiData(apiUrl).subscribe((data) => {
       console.log(data);
       this.courses = data.results;
@@ -67,7 +67,7 @@ export class CoursesComponent implements OnInit {
   }
   getData(pageIndex: any) {
 
-    const apiUrl = `http://16.171.198.0:3030/courses?pageNo=${pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
+    const apiUrl = `https://gadwelooh.ddns.net:3030/courses?pageNo=${pageIndex}&limit=${this.pageSize}&q=${this.inputValue}`;
     this.dataService.getApiData(apiUrl).subscribe((data) => {
       console.log(data);
       this.data = data;
