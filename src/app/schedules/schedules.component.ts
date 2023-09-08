@@ -36,7 +36,7 @@ export class SchedulesComponent implements OnInit {
   }
   getData(pageIndex: any) {
 
-    const url = `http://ec2-16-171-198-0.eu-north-1.compute.amazonaws.com:3030//schedules?pageNo=${pageIndex}&limit=${this.pageSize}`;
+    const url = `http://16.171.198.0:3030/schedules?pageNo=${pageIndex}&limit=${this.pageSize}`;
 
 
     const headers = new HttpHeaders({

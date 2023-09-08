@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://ec2-16-171-198-0.eu-north-1.compute.amazonaws.com:3030//`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://16.171.198.0:3030/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
