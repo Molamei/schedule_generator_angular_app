@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
 import { DataService } from '../data.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-schedules',
   templateUrl: './schedules.component.html',
@@ -22,7 +23,7 @@ export class SchedulesComponent implements OnInit {
   constructor(private http: HttpClient, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.subscribe((params:any) => {
       if (params['addedCourses']) {
 
         this.addedCourses = JSON.parse(params['addedCourses']);

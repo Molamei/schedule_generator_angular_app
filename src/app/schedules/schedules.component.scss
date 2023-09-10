@@ -210,3 +210,28 @@ mat-paginator{
     font-size: 10px;
   }
 }
+@media screen and (max-width: 465px) {
+  .timetable {
+    width: 100%;
+    margin: 0% !important;
+    margin-bottom: 40px !important;
+    grid-template-columns: repeat(7, 1fr);
+
+    .week-names {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .time-interval {
+      grid-template-rows: repeat(12, 1fr);
+    }
+  }
+
+  .content {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .period {
+    font-size: 10px;
+  }
+}
